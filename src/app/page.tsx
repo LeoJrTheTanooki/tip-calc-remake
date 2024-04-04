@@ -139,7 +139,7 @@ export default function Home() {
               <div className="grid grid-cols-2">
                 <div>Bill</div>
                 <div id="billError" className="text-right text-red-600 hidden">
-                  Can't be zero
+                  Can{`'`}t be zero
                 </div>
                 <input
                   id="billInputJsx"
@@ -271,7 +271,7 @@ export default function Home() {
                   id="peopleError"
                   className="text-right text-red-600 hidden"
                 >
-                  Can't be zero
+                  Can{`'`}t be zero
                 </div>
 
                 <input
