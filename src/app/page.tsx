@@ -55,14 +55,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (selectedTip == 0) {
-      customTipInputJsx?.classList.add(
-        "ring-red-600",
-        "focus:ring-red-600",
-        "ring-2"
-      );
-      customTipInputJsx?.classList.remove("focus:ring-Scyan");
-    } else {
+    if (selectedTip > 0) {
       customTipInputJsx?.classList.remove(
         "ring-red-600",
         "focus:ring-red-600",
