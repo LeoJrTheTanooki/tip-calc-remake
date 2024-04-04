@@ -81,7 +81,6 @@ export default function Home() {
       billError?.classList.add("hidden");
     }
     if (
-      // peopleInput < 1 ||
       peopleInputValue == "0" ||
       peopleInputJsx?.value == "0"
     ) {
@@ -244,7 +243,6 @@ export default function Home() {
                     setCustomTipInputValue(e.target.value);
                     handleTipClick();
                     if (
-                      selectedTip < 1 ||
                       customTipInputValue == "0" ||
                       customTipInputJsx?.value == "0"
                     ) {
@@ -284,7 +282,6 @@ export default function Home() {
                     setPeopleInput(parseFloat(e.target.value));
                     setPeopleInputValue(e.target.value);
                     if (
-                      // peopleInput < 1 ||
                       peopleInputValue == "0" ||
                       peopleInputJsx?.value == "0"
                     ) {
