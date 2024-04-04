@@ -63,6 +63,44 @@ export default function Home() {
       );
       customTipInputJsx?.classList.add("focus:ring-Scyan");
     }
+    if (billInput < 1 || billInputValue == "0" || billInputJsx?.value == "0") {
+      billInputJsx?.classList.add(
+        "ring-red-600",
+        "focus:ring-red-600",
+        "ring-2"
+      );
+      billInputJsx?.classList.remove("focus:ring-Scyan");
+      billError?.classList.remove("hidden");
+    } else {
+      billInputJsx?.classList.remove(
+        "ring-red-600",
+        "focus:ring-red-600",
+        "ring-2"
+      );
+      billInputJsx?.classList.add("focus:ring-Scyan");
+      billError?.classList.add("hidden");
+    }
+    if (
+      // peopleInput < 1 ||
+      peopleInputValue == "0" ||
+      peopleInputJsx?.value == "0"
+    ) {
+      peopleInputJsx?.classList.add(
+        "ring-red-600",
+        "focus:ring-red-600",
+        "ring-2"
+      );
+      peopleInputJsx?.classList.remove("focus:ring-Scyan");
+      peopleError?.classList.remove("hidden");
+    } else {
+      peopleInputJsx?.classList.remove(
+        "ring-red-600",
+        "focus:ring-red-600",
+        "ring-2"
+      );
+      peopleInputJsx?.classList.add("focus:ring-Scyan");
+      peopleError?.classList.add("hidden");
+    }
     handleCalc();
   }, [billInput, peopleInput, selectedTip]);
 
@@ -113,7 +151,8 @@ export default function Home() {
                     setBillInput(parseFloat(e.target.value));
                     setBillInputValue(e.target.value);
                     if (
-                      billInput < 1 ||
+                      // billInput < 1
+                      // ||
                       billInputValue == "0" ||
                       billInputJsx?.value == "0"
                     ) {
@@ -245,7 +284,7 @@ export default function Home() {
                     setPeopleInput(parseFloat(e.target.value));
                     setPeopleInputValue(e.target.value);
                     if (
-                      peopleInput < 1 ||
+                      // peopleInput < 1 ||
                       peopleInputValue == "0" ||
                       peopleInputJsx?.value == "0"
                     ) {
