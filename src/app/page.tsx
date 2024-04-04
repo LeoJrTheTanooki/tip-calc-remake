@@ -63,7 +63,7 @@ export default function Home() {
       );
       customTipInputJsx?.classList.add("focus:ring-Scyan");
     }
-    if (billInput < 1 || billInputValue == "0" || billInputJsx?.value == "0") {
+    if (billInputValue == "0" || billInputJsx?.value == "0") {
       billInputJsx?.classList.add(
         "ring-red-600",
         "focus:ring-red-600",
@@ -351,6 +351,7 @@ export default function Home() {
                     setBillInputValue("");
                     setPeopleInputValue("");
                     setCustomTipInputValue("");
+                    handleTipClick();
                   }}
                 >
                   RESET
